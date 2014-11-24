@@ -11,14 +11,15 @@ public class LindenmayerEditor : Editor {
 
 		Lindenmayer myScript = (Lindenmayer)target;
 
-		toggleSaveFile = GUI.Toggle(new Rect(10, 10, 100, 30), toggleSaveFile, "save to file");
+		//toggleSaveFile = GUI.Toggle(new Rect(10, 10, 100, 30), toggleSaveFile, "save to file");
 
 		if (GUILayout.Button("Generate String")) {
-			guiText.text = "wait a moment, this can take a while";
+			//GUIText.text = "wait a moment, this can take a while";
 			myScript.CreateFullAxiom();
 			myScript.Axiom2Vectors();
-			if (toggleSaveFile) myScript.SaveFile();
-			guiText.text = "";
+			// save to file if toggle is checked
+			if (GUI.Toggle(new Rect(10, 10, 100, 30), myScript.toggleSaveFile, "save to file")) myScript.SaveFile();
+			//GUIText.text = "";
 		}
 
 		if (GUILayout.Button("Load from file")) {
