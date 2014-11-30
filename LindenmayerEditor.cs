@@ -1,4 +1,16 @@
-﻿using UnityEngine;
+﻿///////////////////////////////////////////////////////////////////
+/// 
+/// author:
+/// Goncalo Lourenco
+/// 
+/// 
+/// <summary>
+/// Interface editor from Lindenmayer.cs
+/// </summary>
+/// 
+///////////////////////////////////////////////////////////////////
+
+using UnityEngine;
 using System.Collections;
 using UnityEditor;
 
